@@ -7,8 +7,10 @@ Main_04
   
 Main_05
   OBS and ATEM
-  Changes to configuration screen, requires reconfiguration
+  Changes to configuration data, requires reconfiguration.  
+  OTA update webpage
   
 Main_06
   OBS, ATEM and Vmix
-  Changes to configuration, requires reconfiguration
+  OTA update webpage
+  Changes to configuration data, requires reconfiguration
