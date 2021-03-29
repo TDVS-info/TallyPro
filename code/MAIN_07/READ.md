@@ -18,3 +18,5 @@
 6. streamlined existing code.
 
 7. New setLEDs function. Consolidates LED light functions, removing them from switch handing routines.
+
+While this code should not break Tally Pro II, it is designed for Tally Pro III which is currently being designed.  It will feature a smaller case with a built-in battery compartment. It will have a rounded rectangular shape and a printed circuit board. There will only be two wires for the back LED so that we can maintain access to the USB port for powering purposes, since Main_06 added OTA updates.  
