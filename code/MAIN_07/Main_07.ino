@@ -233,7 +233,7 @@ void getMemory() {
     wifi_pswd = read_from_Memory(offset_pswd);
     Switch_Type = read_from_Memory(offset_SwitchType).toInt();    
     Switch_IP = read_from_Memory(offset_SwitchIP);
-    Switch_Port = read_from_Memory(offset_SwitchPort).toInt();
+    Switch_Port = read_from_Memory(offset_SwitchPort);
     Switch_Pswd = read_from_Memory(offset_SwitchPswd);
     Camera_ID = read_from_Memory(offset_Camera_ID);
     if (Camera_ID.length() == 1  && isDigit(Camera_ID.charAt(0))){ 
@@ -289,10 +289,8 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) { // When a
                  digitalWrite(D2, Off);
                  break;
             case WStype_TEXT:                     // if new text data is received
-//                 Serial.print("[WS] get Text");
-                 Serial.print("WStype = ");   Serial.println(type);  
-                 Serial.print("length = ");   Serial.println(length); 
-//                 Serial.println("WS payload = ");
+                 Serial.print("WStype = ");   
+                 Serial.println(type);  
                  processJSON(payload, length);
                  break;
             default:  
@@ -330,7 +328,7 @@ void processJSON(uint8_t * payload, size_t length) {
           return;
       }
       if (Utype == type_Pre && scene_name != Camera_ID) {
-          setLEDs(0, LED_pos);
+          setLEDs(3, LED_pos);
           return;        
       }
       if (Utype == type_Pro && scene_name == Camera_ID) { 
@@ -434,7 +432,7 @@ void readvMixData() {
 }
 
 void setLEDs(int status, int which) {
-  // status: 0 = off, 1 = preview, 2 = program
+  // status: 0 = off, 1 = preview, 2 = program, 3 = preview off
   // which: 0 = both, 1 = front, 2 = back
   
      switch(status) {
@@ -466,6 +464,16 @@ void setLEDs(int status, int which) {
         }
         Serial.println("PROGRAM");
         break;
+       case 3:
+          if(which == both || which == front) { 
+
+            digitalWrite(D2, Off);
+          }
+          if(which == both || which == back) {        
+            digitalWrite(D4, Off);
+          }
+          Serial.println("PREVIEW");
+          break;  
      }
 }
 
@@ -488,7 +496,7 @@ String createSETUPhtml(){
   HTMLsetup += "<input type=\"radio\" id=\"atem\" name=\"swType\" value=\"1\" onclick=\"portATEM()\"><label for=\"atem\">ATEM</label>";
   HTMLsetup += "<input type=\"radio\" id=\"vmix\" name=\"swType\" value=\"2\" onclick=\"portVMIX()\"><label for=\"vmix\">Vmix</label></div><br>";
  
-  HTMLsetup += "Switch IP Address:<input type=\"text\" name=\"ip\" value = \"\" required pattern=\"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$\" placeholder=\"xxx.xxx.xxx.xxx\">";
+  HTMLsetup += "Switch IP Address:<input type=\"text\" name=\"ip\" value = \"\" required pattern=\"^(?:[0-9]{1,3}.){3}[0-9]{1,3}$\" placeholder=\"xxx.xxx.xxx.xxx\">";
   HTMLsetup += "Switch Port:<input type=\"text\" name=\"port\" value = \"4444\" id=\"portField\" required pattern=\"[0-9]{1,4}\"><br><br>";
   HTMLsetup += "Switch Password (if used):<input type=\"text\" name=\"pswd\" value = \"\"><br>";
   HTMLsetup += "Scene Name (OBS) or Camera Number (ATEM, Vmix):<input type=\"text\" name=\"scenename\" value = \"\" required><br><br>";
@@ -567,7 +575,7 @@ String createACKhtml(){
   wifi_pswd = read_from_Memory(offset_pswd);
   Switch_Type = read_from_Memory(offset_SwitchType).toInt();
   Switch_IP = read_from_Memory(offset_SwitchIP);
-  Switch_Port = read_from_Memory(offset_SwitchPort).toInt();  
+  Switch_Port = read_from_Memory(offset_SwitchPort);  
   Switch_Pswd = read_from_Memory(offset_SwitchPswd);
   Camera_ID = read_from_Memory(offset_Camera_ID);
   LED_pos = read_from_Memory(offset_LED_pos).toInt();
@@ -587,7 +595,7 @@ String createACKhtml(){
       HTMLsetup += "Using Vmix as the switcher<br>";           
   }
   HTMLsetup += "<b>Switch IP Adress: </b>" + Switch_IP + "<br>";
-  HTMLsetup += "<b>Switch Port: </b>" + String(Switch_Port) + "<br>";
+  HTMLsetup += "<b>Switch Port: </b>" + Switch_Port + "<br>";
   if(Switch_Pswd.length() == 0){
      HTMLsetup += "<b>Switch Password: </b>N/A<br>";    
   }else{
