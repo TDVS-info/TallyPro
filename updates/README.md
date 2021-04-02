@@ -10,7 +10,13 @@ Main_05
   Changes to configuration data, requires reconfiguration.  
   OTA update webpage
   
-Main_06
+Main_06 
   OBS, ATEM and Vmix
   OTA update webpage
   Changes to configuration data, requires reconfiguration
+  
+Main_07
+  Rear LED support - Tally Pro III, no rear LED in Tally Pro II or I
+  Changes to setup and acknowledgement pages
+  Changes to configuration data, requires reconfiguration
+  
