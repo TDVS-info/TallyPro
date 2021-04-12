@@ -21,3 +21,9 @@ Main_07
   Changes to setup and acknowledgement pages
   Changes to configuration data, requires reconfiguration
   
+Main_08
+  If light is configured, the configuration webpage shows existing config data
+  
+Main_081
+  fixed issue with ackknowledgement screen - was not showing correct gateway and mask IPs
+  
