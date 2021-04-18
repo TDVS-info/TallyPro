@@ -27,3 +27,8 @@ Main_08
 Main_081
   fixed issue with ackknowledgement screen - was not showing correct gateway and mask IPs
   
+Main_082
+  Added dropdown list in config page for available WiFi network SSIDs
+  Cleared data entry fields before displaying config page
+  Fixed Switch Port so that when unconfigured = "4444"
+  
