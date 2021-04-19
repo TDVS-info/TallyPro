@@ -7,28 +7,28 @@ Main_04
   OBS only
   
 Main_05
-  OBS and ATEM
+  OBS and ATEM.
   Changes to configuration data, requires reconfiguration.  
-  OTA update webpage
+  OTA update webpage.
   
 Main_06 
-  OBS, ATEM and Vmix
-  OTA update webpage
-  Changes to configuration data, requires reconfiguration
+  Added Vmix.
+  Modified OTA update webpage.
+  Changes to configuration data structure, requires reconfiguration.
   
 Main_07
-  Rear LED support - Tally Pro III, no rear LED in Tally Pro II or I
-  Changes to setup and acknowledgement pages
-  Changes to configuration data, requires reconfiguration
+  Rear LED support - Tally Pro III, no rear LED in Tally Pro II or I.
+  Changes to setup and acknowledgement pages.
+  Changes to configuration data structure, requires reconfiguration.
   
 Main_08
-  If light is configured, the configuration webpage shows existing config data
+  If light is configured, the configuration webpage shows existing config data.
   
 Main_081
-  fixed issue with ackknowledgement screen - was not showing correct gateway and mask IPs
+  fixed issue with ackknowledgement screen - was not showing correct gateway and mask IPs.
   
 Main_082
-  Added dropdown list in config page for available WiFi network SSIDs
-  Cleared data entry fields before displaying config page
-  Fixed Switch Port so that when unconfigured = "4444"
+  Added dropdown list in config page for available WiFi network SSIDs.
+  Cleared data entry fields before displaying config page.
+  Fixed Switch Port so that when unconfigured = "4444".
   
