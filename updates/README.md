@@ -32,3 +32,6 @@ Main_082
   Cleared data entry fields before displaying config page.
   Fixed Switch Port so that when unconfigured = "4444".
   
+Main_083
+  ESP8266 webserver address is now 1.1.4.1 to help prevent conflicts with existing routers
+  
