@@ -35,3 +35,9 @@ Main_082
 Main_083
   ESP8266 webserver address is now 1.1.4.1 to help prevent conflicts with existing routers
   
+Main_086
+  Added sliders for LED brightness control in setup
+  Reformatted Acknowledgement Web Page
+  Added Version number in code
+  
+  
