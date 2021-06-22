@@ -10,22 +10,22 @@ We are always open to improving our code.  If you can think of a better way to i
 
 Thanks, and happy Tallying!
 
-Using library ESP8266WiFi at version 1.0 in folder: C:\Users\Baronoz\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.0.0\libraries\ESP8266WiFi
+Using library ESP8266WiFi at version 1.0 
 
-Using library ESP8266WebServer at version 1.0 in folder: C:\Users\Baronoz\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.0.0\libraries\ESP8266WebServer 
+Using library ESP8266WebServer at version 1.0 
 
-Using library EEPROM at version 1.0 in folder: C:\Users\Baronoz\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.0.0\libraries\EEPROM 
+Using library EEPROM at version 1.0 
 
-Using library ESP8266mDNS at version 1.2 in folder: C:\Users\Baronoz\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.0.0\libraries\ESP8266mDNS 
+Using library ESP8266mDNS at version 1.2 
 
-Using library ESP8266HTTPUpdateServer at version 1.0 in folder: C:\Users\Baronoz\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.0.0\libraries\ESP8266HTTPUpdateServer
+Using library ESP8266HTTPUpdateServer at version 1.0 
 
-Using library WebSockets at version 2.3.5 in folder: C:\Users\Baronoz\Documents\Arduino\libraries\WebSockets 
+Using library WebSockets at version 2.3.5 
 
-Using library ArduinoJson at version 6.18.0 in folder: C:\Users\Baronoz\Documents\Arduino\libraries\ArduinoJson 
+Using library ArduinoJson at version 6.18.0 
 
-Using library ATEMstd in folder: C:\Program Files\Arduino\libraries\ATEMstd (legacy)
+Using library ATEMstd 
 
-Using library ATEMbase in folder: C:\Program Files\Arduino\libraries\ATEMbase (legacy)
+Using library ATEMbase 
 
-Using library Hash at version 1.0 in folder: C:\Users\Baronoz\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.0.0\libraries\Hash 
+Using library Hash at version 1.0 
